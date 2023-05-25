@@ -1,20 +1,17 @@
-# Étape 1 : Créer l'image de construction
-FROM node:14.17.0-alpine as build
-
+# build environment
+FROM node:14-alpine as react-build
 WORKDIR /app
-
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm ci --silent
-
 COPY . ./
-RUN npm run build
+RUN yarn
+RUN yarn build
 
-# Étape 2 : Utiliser l'image légère de Nginx pour servir l'application
-FROM nginx:1.21.0-alpine
+# server environment
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/conf.d/configfile.template
 
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=react-build /app/build /usr/share/nginx/html
 
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+ENV PORT 8080
+ENV HOST 0.0.0.0
+EXPOSE 8080
+CMD sh -c "envsubst '\$PORT' < /etc/nginx/conf.d/configfile.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
