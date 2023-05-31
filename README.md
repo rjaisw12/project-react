@@ -1,13 +1,36 @@
-# react-tailwind-portfolio
+# Personal Portfolio Website in React
 
-+ <a href="https://www.youtube.com/watch?v=hYv6BM2fWd8">Design</a>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-+ Made with tailwind
+<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://user-images.githubusercontent.com/50160672/174933373-1ba6cadf-1c9a-48c3-aa58-984d0bd62d82.png">
 
-![Ekran görüntüsü 2023-01-28 221435](https://user-images.githubusercontent.com/104009655/215286744-b85473b0-22cd-4deb-9152-149cad4c90cd.png)
+Built using:
 
-![Ekran görüntüsü 2023-01-28 221445](https://user-images.githubusercontent.com/104009655/215286723-3defaee7-09e9-4fc6-8ab4-4d6187ffc001.png)
+- Front-end library: React
+- CSS framework: React-bootstrap
+- CSS animations library: Animate.css
 
-![Ekran görüntüsü 2023-01-28 221901](https://user-images.githubusercontent.com/104009655/215286846-86706df7-37a1-4764-b4b7-6aafa74c2a18.png)
+In the /personal-portfolio, you can run:
 
-![Ekran görüntüsü 2023-01-28 221504](https://user-images.githubusercontent.com/104009655/215286732-3522a344-a21f-4a77-9c8f-dd72ce881288.png)
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
