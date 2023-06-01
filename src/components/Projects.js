@@ -14,19 +14,19 @@ export const Projects = () => {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
-      projectUrl: 'www.wikipedia.org',
+      projectUrl: 'https://www.wikipedia.org',
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
-      projectUrl: 'www.google.com',
+      projectUrl: 'https://www.google.com',
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
-      projectUrl: 'www.airbus.com',
+      projectUrl: 'https://www.airbus.com',
     },
   ];
 
