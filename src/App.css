@@ -117,6 +117,11 @@ span.navbar-text {
     display: inline-block;
     margin-left: 14px;
 }
+
+.footer-social-icon {
+  margin-top: 14px;
+}
+
 .social-icon a {
     width: 42px;
     height: 42px;
