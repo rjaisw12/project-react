@@ -6,18 +6,23 @@ const LearnChinese = () => {
   const [characterOptions, setCharacterOptions] = useState([]);
   const [selectedCharacters, setSelectedCharacters] = useState([]);
 
-  // Supposez que cette fonction fait un appel API pour obtenir les données
-  const fetchData = () => {
-    // Simuler l'appel API
-    const data = {
-      sentenceWithMissingWord: "Phrase avec des __ masqués",
-      translatedSentence: "Traduction en français",
-      characterOptions: ["a", "b", "c", "d", "e", "f", "g", "h"]
-    };
-    setSentenceWithMissingWord(data.sentenceWithMissingWord);
-    setTranslatedSentence(data.translatedSentence);
-    setCharacterOptions(data.characterOptions);
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://apichinese.raphaeljaiswal.com/get-chinese-quiz');
+  
+      if (!response.ok) {
+        throw new Error('Erreur réseau lors de la récupération des données.');
+      }
+  
+      const data = await response.json();
+      setSentenceWithMissingWord(data.sentenceWithMissingWord);
+      setTranslatedSentence(data.translatedSentence);
+      setCharacterOptions(data.characterOptions);
+    } catch (error) {
+      console.error("Il y a eu un problème avec l'opération fetch: ", error.message);
+    }
   };
+  
 
   const handleCharacterClick = (char) => {
     if (selectedCharacters.length < 2 && !selectedCharacters.includes(char)) {
