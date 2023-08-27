@@ -621,3 +621,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+/************ Custom ************/
+.demo-container {
+  margin: 150px auto 2rem auto; 
+  width: 80vw;       /* par exemple, 80% de la largeur de la fenêtre */
+  height: 60vh;      /* par exemple, 60% de la hauteur de la fenêtre */
+  border: 1px solid black; /* pour visualiser les limites */
+  background-color: rgba(0, 0, 0, 0.7); /* une couleur de fond pour différencier la zone */
+  display: flex;   /* pour centrer le contenu à l'intérieur */
+  flex-direction: column;  /* Cela force les éléments enfants à s'empiler verticalement */
+  justify-content: center; /* centrage horizontal du contenu */
+  align-items: center;     /* centrage vertical du contenu */
+}
+
+.character-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.selected-characters {
+  margin-top: 20px;
+  font-size: 24px;
+}
